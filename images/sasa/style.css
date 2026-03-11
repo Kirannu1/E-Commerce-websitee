@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url(u9u);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: url('./background2.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000; 
+    overflow: hidden;
+}
+
+@keyframes gradientBG {
+0% { background-position: 0% 50%;}
+50% { background-position: 100% 50%;}
+100% { background-position: 0% 50%;} 
+}
+
+
+.glass-container {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0,0,0,0.5);
+    z-index: 1;
+    background: url('./background2.jpg');
+}
+
+.glass-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255 , 255 , 0.05);
+    transform: skewX(-15deg);
+    transition: 0.5s;
+    pointer-events: none;
+
+}
+
+.glass-container:hover::before {
+    left: 120%;
+}
+
+.glass-container h2 {
+    color: white;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, al);
+    border: none;
+    outline: none;
+ border-radius: 35px;
+}
+
+.login-btn {
+    margin: 0px 65px;
+background-color: black;
+color: white;
+padding: 5px 50px;
+border: 2px solid grey;
+border-radius: 25px;
+font-size: 20px;
+cursor: pointer;
+align-items: center;
+
+
+}
+
+.login-btn:hover{
+    background-color: white;
+    color: black;
+}
+
+.h2{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+
+.input-group{
+    border-radius: 10px;
+}
+
+
+
+
+.background img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
